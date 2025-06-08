@@ -184,7 +184,7 @@ Total Keuntungan Koperasi: Rp250000
     <div class="section" style="margin-top: 40px;">
     <button onclick="window.open('https://etl-task-bank-sampah-farhan.streamlit.app/', '_blank')" 
         style="padding: 10px 20px; background-color: #008080; color: white; border: none; border-radius: 5px; cursor: pointer;">
-        Buka Aplikasi Streamlit
+        Buka Aplikasi
     </button>
     </div>
 </body>
