@@ -32,6 +32,7 @@
         self.nama_umkm = nama_umkm
         self.anggota = []
         self.dana_pinjaman = 50000000</code></pre>
+        <p><strong>Penjelasan:</strong> Class ini adalah dasar dari sistem, menyimpan nama UMKM, daftar anggota, dan total dana pinjaman awal sebesar 50 juta rupiah.</p>
 
         <h3>Query 2: Method tambah_anggota</h3>
         <pre><code>def tambah_anggota(self, nama_anggota, jumlah_pinjaman):
@@ -39,6 +40,7 @@
         "nama": nama_anggota,
         "pinjaman": jumlah_pinjaman
     })</code></pre>
+    <p><strong>Penjelasan:</strong> Method ini menambahkan anggota baru ke dalam daftar, lengkap dengan nama dan jumlah pinjaman yang diajukan.</p>
 
         <h3>Query 3: Method Menghitung Pengembalian Pinjaman</h3>
         <pre><code>def hitung_pengembalian(self, nama_anggota, tahun):
@@ -47,12 +49,14 @@
             bunga = 0.05 * tahun * anggota["pinjaman"]
             return anggota["pinjaman"] + bunga
     return "Anggota tidak ditemukan."</code></pre>
+    <p><strong>Penjelasan:</strong> Fungsi ini menghitung jumlah pengembalian pinjaman setelah periode tertentu, termasuk bunga 5% per tahun.</p>
 
         <h3>Query 4: Class Koperasi</h3>
         <pre><code>class Koperasi(UMKMSystem):
     def __init__(self, nama_umkm):
         super().__init__(nama_umkm)
         self.transaksi = []</code></pre>
+        <p><strong>Penjelasan:</strong> Kelas ini mewarisi UMKMSystem dan menambahkan fitur pencatatan transaksi jual dan beli untuk koperasi.</p>
 
         <h3>Query 5: Method catat_transaksi</h3>
         <pre><code>def catat_transaksi(self, nama_anggota, jenis, jumlah):
@@ -61,18 +65,21 @@
         "jenis": jenis,
         "jumlah": jumlah
     })</code></pre>
+    <p><strong>Penjelasan:</strong> Method ini menyimpan data transaksi anggota berdasarkan nama, jenis (jual/beli), dan jumlahnya.</p>
 
         <h3>Query 6: Method hitung_keuntungan</h3>
         <pre><code>def hitung_keuntungan(self):
     total_jual = sum(t["jumlah"] for t in self.transaksi if t["jenis"] == "jual")
     total_beli = sum(t["jumlah"] for t in self.transaksi if t["jenis"] == "beli")
     return total_jual - total_beli</code></pre>
+    <p><strong>Penjelasan:</strong> Fungsi ini menghitung total keuntungan koperasi dari selisih penjualan dan pembelian seluruh transaksi.</p>
 
         <h3>Query 7: Class BankSampah</h3>
         <pre><code>class BankSampah(UMKMSystem):
     def __init__(self, nama_umkm):
         super().__init__(nama_umkm)
         self.data_sampah = {}</code></pre>
+        <p><strong>Penjelasan:</strong> Kelas ini memperluas UMKMSystem dengan kemampuan menyimpan data jenis dan jumlah sampah dari tiap anggota.</p>
 
         <h3>Query 8: Method catat_sampah</h3>
         <pre><code>def catat_sampah(self, nama_anggota, jenis_sampah, jumlah_kg):
@@ -82,6 +89,7 @@
         "jenis": jenis_sampah,
         "jumlah": jumlah_kg
     })</code></pre>
+    <p><strong>Penjelasan:</strong> Fungsi ini mencatat jenis dan berat sampah (dalam kg) yang disetorkan oleh setiap anggota.</p>
 
         <h3>Query 9: Method hitung_nilai_tukar</h3>
         <pre><code>def hitung_nilai_tukar(self, nama_anggota):
@@ -90,6 +98,7 @@
     for item in self.data_sampah.get(nama_anggota, []):
         total += item["jumlah"] * harga.get(item["jenis"], 0)
     return total</code></pre>
+    <p><strong>Penjelasan:</strong> Fungsi ini mengubah jumlah sampah menjadi nilai uang berdasarkan jenisnya (misalnya plastik = 5.000/kg).</p>
 
         <h3>Query 10: Method pesan_edukasi</h3>
         <pre><code>def pesan_edukasi(self, nama_anggota):
@@ -102,6 +111,7 @@
         return "Terima kasih telah berkontribusi, mari kumpulkan lebih banyak!"
     else:
         return "Ayo mulai kumpulkan sampah dan jaga lingkungan kita!"</code></pre>
+     <p><strong>Penjelasan:</strong> Memberikan pesan motivasi berdasarkan jumlah sampah yang dikumpulkan. Semakin banyak, semakin positif pesannya.</p>
 
         <h3>Query 11: Program Utama</h3>
         <pre><code>if __name__ == "__main__":
@@ -151,6 +161,7 @@
         print(f"Pesan Edukasi: {pesan}")
 
     print(f"\nTotal Keuntungan Koperasi: Rp{koperasi.hitung_keuntungan()}")</code></pre>
+    <p><strong>Penjelasan:</strong> Program utama akan menjalankan seluruh alur — input data, simpan, dan menampilkan output. Semua kelas dan method sebelumnya digunakan di sini.</p>
     </div>
 
     <div class="section">
