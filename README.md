@@ -13,7 +13,7 @@
     </style>
 </head>
 <body>
-    <h1>📝 Jawaban Proyek Ujian - UMKM, Koperasi, dan Bank Sampah</h1>
+    <h1>Jawaban Proyek Ujian - UMKM, Koperasi, dan Bank Sampah</h1>
     <p><strong>Nama Peserta:</strong> Farhan Fadillah </p>
     <p><strong>Batch:</strong> ETL Batch 9</p>
     <p><strong>No. Absen:</strong> 9.008.DB2025</p>
@@ -25,7 +25,7 @@
     </div>
 
     <div class="section">
-        <h2>🧩 Langkah-Langkah Penyelesaian</h2>
+        <h2>Langkah-Langkah Penyelesaian</h2>
 
         <h3>Query 1: Class UMKMSystem</h3>
         <pre><code>class UMKMSystem:
