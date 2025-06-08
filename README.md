@@ -1,9 +1,10 @@
+
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <title>Jawaban Proyek Ujian - UMKM, Koperasi, dan Bank Sampah</title>
     <style>
-        body { font-family: Arial, sans-serif; padding: 30px; background-color: #f8f8f8; }
+        body { font-family: Arial, sans-serif; padding: 30px; background-color: #ffffff; }
         h1, h2, h3 { color: #333; }
         pre { background-color: #eee; padding: 10px; border-left: 4px solid #008080; overflow-x: auto; }
         code { font-family: "Courier New", Courier, monospace; }
